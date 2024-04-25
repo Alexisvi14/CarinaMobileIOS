@@ -62,7 +62,7 @@ public class EbayTests implements IAbstractTest {
     public void submenuElements() throws InterruptedException {
         HomePageBase homePageEbay = initPage(getDriver(), HomePageBase.class);
         MobileContextUtils mobileContextUtils = new MobileContextUtils();
-        mobileContextUtils.switchMobileContext(MobileContextUtils.View.WEB_CHROME);
+        mobileContextUtils.switchMobileContext(MobileContextUtils.View.WEB_SAFARI);
         homePageEbay.clickBurguerMenu();
         homePageEbay.clickCategoriesLink();
         homePageEbay.clickLinkByText("Moda");
@@ -74,7 +74,7 @@ public class EbayTests implements IAbstractTest {
     public void dropdownTest() throws InterruptedException {
         HomePageBase homePageEbay = initPage(getDriver(), HomePageBase.class);
         MobileContextUtils mobileContextUtils = new MobileContextUtils();
-        mobileContextUtils.switchMobileContext(MobileContextUtils.View.WEB_CHROME);
+        mobileContextUtils.switchMobileContext(MobileContextUtils.View.WEB_SAFARI);
         homePageEbay.clickBurguerMenu();
         homePageEbay.clickCategoriesLink();
         homePageEbay.clickLinkByText("Todas las categorías");
@@ -85,7 +85,7 @@ public class EbayTests implements IAbstractTest {
     public void clickSportsLinkTest() throws InterruptedException {
         HomePageBase homePageEbay = initPage(getDriver(), HomePageBase.class);
         MobileContextUtils mobileContextUtils = new MobileContextUtils();
-        mobileContextUtils.switchMobileContext(MobileContextUtils.View.WEB_CHROME);
+        mobileContextUtils.switchMobileContext(MobileContextUtils.View.WEB_SAFARI);
         homePageEbay.clickBurguerMenu();
         homePageEbay.clickCategoriesLink();
         var sportsPage = homePageEbay.clickSportsLink();
@@ -93,13 +93,14 @@ public class EbayTests implements IAbstractTest {
         Assert.assertTrue(sportsPage.isTitlePresent());
     }
     @Test(description = "Sports link functionality")
-    public void sportList() {
+    public void sportList() throws InterruptedException {
         HomePageBase homePageEbay = initPage(getDriver(), HomePageBase.class);
         MobileContextUtils mobileContextUtils = new MobileContextUtils();
-        mobileContextUtils.switchMobileContext(MobileContextUtils.View.WEB_CHROME);
+        mobileContextUtils.switchMobileContext(MobileContextUtils.View.WEB_SAFARI);
         homePageEbay.clickBurguerMenu();
         homePageEbay.clickCategoriesLink();
         var sportsPage = homePageEbay.clickSportsLink();
         sportsPage.clickSection("Golf");
+        Thread.sleep(3000);
     }
 }

@@ -74,7 +74,7 @@ public class HomePage extends HomePageBase {
 
     @Override
     public void clickLinkByText(String text) {
-        getDriver().findElement(By.linkText(text)).click();
+        getDriver().findElement(By.xpath("//span[contains(text(), '" + text + "')]")).click();
     }
 
     @Override

@@ -12,7 +12,7 @@ import java.util.Set;
 @DeviceType(pageType = DeviceType.Type.IOS_PHONE, parentClass = ProductDetailPageBase.class)
 public class ProductDetailPage extends ProductDetailPageBase {
 
-    @FindBy(css = "h1[class='x-item-title__mainTitle'] span[class='ux-textspans ux-textspans--BOLD']")
+    @FindBy(css = "div[class='vi-title__main'] h1 span span")
     ExtendedWebElement productTitle;
 
     public ProductDetailPage(WebDriver driver) {
