@@ -47,6 +47,7 @@ public class EbayTests implements IAbstractTest {
     @MethodOwner(owner = "Alexis")
     public void searchButtonTest() {
         HomePageBase homePageEbay = initPage(getDriver(), HomePageBase.class);
+        //change context for Web Mobile
         MobileContextUtils mobileContextUtils = new MobileContextUtils();
         mobileContextUtils.switchMobileContext(MobileContextUtils.View.WEB_SAFARI);
         homePageEbay.clickSearchBox("Iphone");
